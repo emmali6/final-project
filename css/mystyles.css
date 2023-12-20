@@ -4,12 +4,12 @@
 body{
     font-family:Arial, Helvetica, sans-serif;
     color: black;
-    background-color:aliceblue;
+    background-color:bisque;
     margin: 1rem 5%;
 }
 /* header */
 header{
-    background-color:white;
+    background-color:transparent;
     padding: 0.25em;
     margin-bottom: 1%;
 }
@@ -73,17 +73,15 @@ header p{
 }
 /* main */
 .parks{
-    background-image: url("../img/zion_national_park.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #FAF1CF;
     padding-bottom: 2em;
 }
 .parks h1{
-    color: white;
+    color: black;
     font-size: 2em;
     text-align: center;
     padding: 1em;
-    text-shadow: 10px 10px 10px black;
+    text-shadow: 10px 10px 10px grey;
     text-transform: uppercase;
 }
 .parks .sections{
@@ -103,7 +101,7 @@ header p{
 .parks .sections section h2{
     background-color: white;
     text-align: center;
-    margin-top: 0.5;
+    margin-top: 0.5em;
     padding: 0.25em;
     margin-left: 5em;
     margin-right: 5em;
@@ -122,11 +120,14 @@ header p{
     text-decoration: none;
 }
 /* acadia national park page main */
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+}
 .vertical {
-    float: left;.column, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-      }
+    float: left;
     width: 33.3%;
     margin-bottom: 16px;
     padding: 0 8px;
@@ -135,14 +136,13 @@ header p{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px;
 }
-.about-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #474e5d;
-    color: white;
-}
 .info {
     padding: 16px;
+}
+.info::after, .parks::after{
+    content: "";
+    clear: both;
+    display: table;
 }
 /* footer contact section */
 input[type=text], select, textarea {
@@ -164,14 +164,11 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
   
-  /* Style the container/contact section */
+
 .container {
     border-radius: 5px;
     background-color: #f2f2f2;
-    padding: 10px;
 }
-  
-  /* Create two columns that float next to eachother */
 .column {
     float: left;
     width: 50%;
@@ -179,7 +176,6 @@ input[type=submit]:hover {
     padding: 20px;
 }
   
-  /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
@@ -187,10 +183,7 @@ input[type=submit]:hover {
 }
 /* picture shake */
 img:hover {
-    /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shake 0.5s;
-  
-    /* When the animation is finished, start again */
     animation-iteration-count: infinite;
 }
   @keyframes shake {
@@ -208,7 +201,6 @@ img:hover {
 }
 /* footer */
 footer{
-    background-color: ;
     padding: 1em;
     font-size: 90%;
     border-top-width: 2px;
