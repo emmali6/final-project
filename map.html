@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Park Map</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <link rel="stylesheet" href="css/mystyles.css">
+    <script src="scripts/javascript.js"></script>
+
+    <style>
+        body {
+            margin: 1rem 5%;
+        }
+        #map_container {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>National Parks in the United States</h1>
+      <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="parks_in_the_northeast.html">Parks in the Northeast</a>
+        <a href="#">Parks in the West</a>
+        <a href="#">Parks in the Southeast</a>
+        <a href="#">Parks in the Midwest</a>
+        <a href="map.html">Map of Parks</a>
+        <div class="wrapper">
+          <img class="search-icon" src="img/search_icon.jpg" alt="search icon">
+          <input class="search" placeholder="Search" type="text" >
+        </div>
+          </div>
+    </header>
+    <main>
+    <div id="map_container"></div>
+    <script>
+        var acadiaNationalPark = [44.33743619097091, -68.27485122384678];
+        var yosemiteNationalPark = [37.8712810182797, -119.53469259247024];
+        var zionNationalPark = [37.296512361700536, -113.02819137893705];
+        var voyageursNationalPark = [48.478990434113875, -92.84405715781386];
+        var rockyMountainNationalPark = [40.33979735008785, -105.68752495644053];
+
+        var zoomLevel = 4;
+
+        var map = L.map('map_container').setView(rockyMountainNationalPark, zoomLevel);
+
+        var attributionHtml = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: attributionHtml
+        }).addTo(map);
+
+        L.marker(acadiaNationalPark).bindPopup("<a href='acadia national park.html'>Acadia National Park</a><br>Acadia is the first national park created entirely from private donations.").addTo(map);
+
+        L.marker(yosemiteNationalPark).bindPopup("Yosemite National Park").addTo(map);
+
+        L.marker(zionNationalPark).bindPopup("Zion National Park").addTo(map);
+
+        L.marker(voyageursNationalPark).bindPopup("Voyageurs National Park").addTo(map);
+
+        L.marker(rockyMountainNationalPark).bindPopup("Rocky Mountain National Park").addTo(map);
+    </script>
+<p>Use this map to see where National Parks lie across the United States.</p>
+</main>
+<footer>
+    <div class="container">
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+          <p>Swing by for a cup of coffee, or leave us a message:</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="img/denali_national_park.jpg" style="width:100%" alt="Denali National Park">
+          </div>
+          <div class="column">
+            <form action="/action_page.php" target="_self">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+      <p>Emma Li's Final Project for CSCI E-12 Fall 2023 Harvard Extension School</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>National Parks in the US</title>
+    <link rel="stylesheet" href="css/mystyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/javascript.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>National Parks in the United States</h1>
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="parks_in_the_northeast.html">Parks in the Northeast</a>
+            <a href="#">Parks in the West</a>
+            <a href="#">Parks in the Southeast</a>
+            <a href="#">Parks in the Midwest</a>
+            <a href="map.html">Map of Parks</a>
+            <div class="wrapper">
+              <img class="search-icon" src="img/search_icon.jpg" alt="search icon">
+              <input class="search" placeholder="Search" type="text" >
+            </div>
+        </div>
+        <img src="img/national_parks_map_teal.jpg" alt="National Parks Map">
+      <p>In the United States, there are 424 National Park Units, and 63 of those have the "national park" title. Some span multiple states and some are only located in one state. In this website, you can learn about each park and what it has to offer. You'll be able to filter by region and then by state. If you've already been to some, you can fill out the survey to see which parks are most visited!</p>
+    </header>
+    <main>
+      <div class="parks">
+        <h1>Parks by Region</h1>
+        <div class="sections">
+        <section>
+        <h2><a href="parks_in_the_northeast.html">Parks in the Northeast</a></h2>
+        <p>This portion will cover the parks located in the 9 northeast states: Connecticut, Delaware, Maine, Maryland, Massachusetts, New Hampshire, New Jersey, New York, Rhode Island, Pennsylvania,and Vermont.</p>
+        </section>
+        <section>
+          <h2><a href="#">Parks in the West</a></h2>
+          <p>This portion will cover the parks located in the 9 west states: California, Colorado, Idaho, Montana, Nevada, Oregon, Utah, Washington, and Wyoming.</p>
+        </section>
+        <section>
+            <h2><a href="#">Parks in the Southeast</a></h2>
+            <p>This portion will cover the parks located in the 12 southeast states: Alabama, Arkansas, Florida, Georgia, Kentucky, Louisiana, Mississippi, North Carolina, South Carolina, Tennessee, Virginia, and West Virginia.</p>
+        </section>
+        <section>
+          <h2><a href="#">Parks in the Southwest</a></h2>
+          <p>This portion will cover the parks located in the 4 southwest states: Arizona, New Mexico, Oklahoma, and Texas.</p>
+        </section>
+        <section>
+          <h2><a href="#">Parks in the Midwest</a></h2>
+          <p>This portion will cover the parks located in the 12 midwest states: Illinois, Indiana, Iowa, Kansas, Michigan, Minnesota, Missouri, Nebraska, North Dakota, Ohio, South Dakota, and Wisconsin.</p>
+        </section>
+      </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+          <p>Swing by for a cup of coffee, or leave us a message:</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="img/denali_national_park.jpg" alt="Denali National Park" style="width:100%">
+          </div>
+          <div class="column">
+            <form action="/action_page.php" target="_self">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+        <p>Emma Li's Final Project for CSCI E-12 Fall 2023 Harvard Extension School</p>
+    </footer>
+  </body>
+</html>
